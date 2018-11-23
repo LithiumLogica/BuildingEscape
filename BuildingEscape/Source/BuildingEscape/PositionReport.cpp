@@ -2,6 +2,8 @@
 
 #include "PositionReport.h"
 #include "BuildingEscape.h"
+#include "Runtime/Engine/Classes/GameFramework/Actor.h" //Can shorten this down to "GameFramework/Actor.h" but not necessary. To be safe, I'm leaving it as it is, currently.
+
 
 
 // Sets default values for this component's properties
