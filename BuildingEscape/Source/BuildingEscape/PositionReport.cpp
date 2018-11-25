@@ -2,6 +2,7 @@
 
 #include "PositionReport.h"
 #include "BuildingEscape.h"
+#include "Runtime/Core/Public/Math/Vector.h"
 #include "Runtime/Engine/Classes/GameFramework/Actor.h" //Can shorten this down to "GameFramework/Actor.h" but not necessary. To be safe, I'm leaving it as it is, currently.
 
 
@@ -24,7 +25,7 @@ void UPositionReport::BeginPlay()
 	Super::BeginPlay();
 
 	FString ObjectName = GetOwner()->GetName();
-	FString ObjectPos = "X=Something, Y=Something else, etc";
+	FString ObjectPos = GetOwner()->GetTransform().GetLocation().ToString();
 	UE_LOG(LogTemp, Warning, TEXT("%s is at %s"), *ObjectName, *ObjectPos);
 	
 }
